@@ -1,0 +1,99 @@
+* {
+	text-decoration: none;
+	list-style-type: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	margin-right: 0;
+	border: none;
+
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:active {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul,
+li {
+	list-style: none;
+	text-decoration: none;
+}
+
+img {
+	vertical-align: top;
+	color: transparent;
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+input,
+textarea,
+select {
+	-webkit-appearance: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+
+	&::-ms-clear {
+		display: none;
+	}
+}
+
+button,
+input[type='submit'] {
+	display: inline-block;
+	box-shadow: none;
+	background-color: transparent;
+	background: none;
+	cursor: pointer;
+
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+
+label {
+	cursor: pointer;
+}
