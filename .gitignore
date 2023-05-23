@@ -1,0 +1,7 @@
+# Ignore server-specific files
+server/node_modules/
+server/dist/
+
+# Ignore client-specific files
+client/node_modules/
+client/.next/
