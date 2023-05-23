@@ -1,14 +1,36 @@
-const http = require('http');
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const app = express();
 
-const hostname = '127.0.0.1';
-const port = 8080;
+const HOST = process.env.HOST;
+const PORT = process.env.PORT || 3004;
 
-const server = http.createServer((req, res) => {
-	res.statusCode = 200;
-	res.setHeader('Content-Type', 'text/plain');
-	res.end('Hello World');
-});
+app.use(
+	cors({
+		origin: [, 'http://127.0.0.1:3000', 'https://127.0.0.1:3000'],
+		methods: ['GET', 'POST'],
+		credentials: false,
+	})
+);
 
-server.listen(port, hostname, () => {
-	console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.use(express.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.use('/api', require('./controllers/app'));
+
+// app.use((req, res) => {
+// 	res.status(404).json({ error: 'Not found' });
+// });
+
+async function start() {
+	try {
+		await app.listen(PORT, HOST);
+		console.log(`Server running at http://${HOST}:${PORT}/`);
+	} catch (error) {
+		console.log('Server error: ' + error.message);
+	}
+}
+
+start();
