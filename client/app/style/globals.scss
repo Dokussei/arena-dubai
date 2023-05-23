@@ -1,9 +1,7 @@
 :root {
 	--max-width: 1100px;
 	--border-radius: 12px;
-	--font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+	--font-gotham: Gotham, sans-serif;
 
 	// color schema
 	--background-primary: #ffffff;
@@ -19,11 +17,15 @@ body {
 }
 
 body {
+	font-family: var(--font-gotham);
 	color: var(--font-color-primary);
 	background-color: var(--background-main);
 }
 
 main {
+	max-width: var(--max-width);
 	min-height: 1000vh;
+
+	margin: 0 auto;
 	padding: 0 1rem;
 }
