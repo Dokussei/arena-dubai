@@ -1,11 +1,18 @@
 :root {
-	--max-width: 1100px;
+	--max-width: 1460px;
+	--padding-general: 0 54px 0 81px;
+	--border-radius-btn: 9px;
 	--border-radius: 12px;
 	--font-gotham: Gotham, sans-serif;
 
 	// color schema
-	--background-primary: #ffffff;
-	--font-color-primary: #000000;
+	--background-main: #ffffff;
+	--background-primary: #b37749;
+	--background-grey: #f1f3f8;
+
+	--font-color-main: #000000;
+	--font-color-primary: #b37749;
+	--font-color-white: #ffffff;
 
 	// size schema
 }
@@ -18,14 +25,10 @@ body {
 
 body {
 	font-family: var(--font-gotham);
-	color: var(--font-color-primary);
+	color: var(--font-color-main);
 	background-color: var(--background-main);
 }
 
 main {
-	max-width: var(--max-width);
-	min-height: 1000vh;
-
-	margin: 0 auto;
-	padding: 0 1rem;
+	width: 100%;
 }

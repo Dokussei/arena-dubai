@@ -2,8 +2,7 @@ import './style/rest.scss';
 import './style/fonts/font.scss';
 import './style/globals.scss';
 
-// import SocialSide from './components/socialSide/socialSide';
-// import Footer from './components/footer/footer';
+import Header from './components/header/header';
 
 export const metadata = {
 	title: 'Arena',
@@ -14,7 +13,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body>
-				{/* <SocialSide /> */}
+				<Header />
 				<main>{children}</main>
 				{/* <Footer /> */}
 			</body>
