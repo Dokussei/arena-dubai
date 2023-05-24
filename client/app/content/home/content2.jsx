@@ -1,5 +1,11 @@
-// import Image from 'next/image';
+'use client';
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import styles from '../../style/home/page.module.scss';
+import '../../style/home/swiper.scss';
 
 export default function Content2() {
 	return (
@@ -21,7 +27,56 @@ export default function Content2() {
 
 				<div className={styles.wrapContent}>
 					<div className={styles.card}>
-						<div className={styles.img}></div>
+						<div className={styles.img}>
+							<Swiper
+								autoplay={{
+									delay: 2500,
+									disableOnInteraction: false,
+								}}
+								pagination={{
+									clickable: true,
+								}}
+								modules={[Autoplay, Pagination]}
+								className={styles.cardSwiper}
+							>
+								<SwiperSlide>
+									<Image
+										className={`${styles.item}`}
+										src='/img/photo1.png'
+										alt='photo1'
+										width={412}
+										height={252}
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<Image
+										className={`${styles.item}`}
+										src='/img/photo1.png'
+										alt='photo1'
+										width={412}
+										height={252}
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<Image
+										className={`${styles.item}`}
+										src='/img/photo1.png'
+										alt='photo1'
+										width={412}
+										height={252}
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<Image
+										className={`${styles.item}`}
+										src='/img/photo1.png'
+										alt='photo1'
+										width={412}
+										height={252}
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
 						<div className={styles.content}>
 							<h3 className={styles.tittle}>Consectetur Adipiscing</h3>
 							<p className={styles.description}>Lorem ipsum dolor sit</p>
