@@ -1,0 +1,100 @@
+const getProperty = async (req, res) => {
+	const dataAll = [
+		{
+			id: 1,
+			name: 'Consectetur Adipiscing',
+			description: 'Lorem ipsum dolor sit',
+			price: 600000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property1/photo1.png;/img/property1/photo2.png;/img/property1/photo3.png;/img/property1/photo4.png',
+		},
+		{
+			id: 2,
+			name: 'Lorem ipsum',
+			description: 'Lorem ipsum dolor sit',
+			price: 1900000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property2/photo1.png;/img/property2/photo2.png;/img/property2/photo3.png;/img/property2/photo4.png',
+		},
+		{
+			id: 3,
+			name: 'Eiusmod Tempor',
+			description: 'Lorem ipsum dolor sit',
+			price: 500000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property3/photo1.png;/img/property3/photo2.png;/img/property3/photo3.png;/img/property3/photo4.png',
+		},
+		{
+			id: 4,
+			name: 'Lorem',
+			description: 'Lorem ipsum dolor sit',
+			price: 900000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property1/photo1.png;/img/property1/photo2.png;/img/property1/photo3.png;/img/property1/photo4.png',
+		},
+		{
+			id: 5,
+			name: 'Consectetur Adipiscing',
+			description: 'Lorem ipsum dolor sit',
+			price: 1000000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property2/photo1.png;/img/property2/photo2.png;/img/property2/photo3.png;/img/property2/photo4.png',
+		},
+		{
+			id: 6,
+			name: 'Adipiscing',
+			description: 'Lorem ipsum dolor sit',
+			price: 1600000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property3/photo1.png;/img/property3/photo2.png;/img/property3/photo3.png;/img/property3/photo4.png',
+		},
+		{
+			id: 7,
+			name: 'Consectetur Adipi',
+			description: 'Lorem ipsum dolor sit',
+			price: 2600000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property1/photo1.png;/img/property1/photo2.png;/img/property1/photo3.png;/img/property1/photo4.png',
+		},
+		{
+			id: 8,
+			name: 'Consectetur ',
+			description: 'Lorem ipsum dolor sit',
+			price: 1300000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property2/photo1.png;/img/property2/photo2.png;/img/property2/photo3.png;/img/property2/photo4.png',
+		},
+		{
+			id: 9,
+			name: 'Consectetur ipi',
+			description: 'Lorem ipsum dolor sit',
+			price: 1200000,
+			category: 'On-plan',
+			paid: 'Quarterly',
+			annualYield: '20%',
+			url: '/img/property3/photo1.png;/img/property3/photo2.png;/img/property3/photo3.png;/img/property3/photo4.png',
+		},
+	];
+	try {
+		res.status(200).send(dataAll);
+	} catch (error) {
+		res.status(500).send(err);
+	}
+};
+module.exports = { getProperty };

@@ -195,14 +195,15 @@
 		}
 
 		.wrapContent {
-			background-color: aqua;
 			width: 100%;
 			margin-top: 100px;
 
 			display: flex;
 			align-items: flex-start;
-			justify-content: center;
+			justify-content: space-between;
 			flex-wrap: wrap;
+
+			gap: 25px;
 
 			.card {
 				max-width: 412px;
@@ -319,6 +320,224 @@
 
 							background-color: var(--background-primary);
 							border-radius: var(--border-radius-btn);
+						}
+					}
+				}
+			}
+		}
+
+		.flex {
+			margin-top: 70px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&.unVisible {
+				display: none;
+			}
+
+			.moreBtn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				gap: 15px;
+
+				font-family: var(--font-gotham);
+				font-size: 26px;
+				font-weight: 500;
+
+				.item {
+					width: 9px;
+					height: 7px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.content2 {
+		width: 100%;
+		padding: 150px 0;
+
+		background-color: var(--background-grey);
+
+		.wrap {
+			max-width: var(--max-width);
+			width: 100%;
+			margin: 0 auto;
+			padding: var(--padding-general);
+			.text {
+				.subTitle {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 20px;
+					h5 {
+						font-family: var(--font-gotham);
+						font-size: 18px;
+						font-weight: 500;
+						color: var(--font-color-primary);
+						text-transform: uppercase;
+					}
+
+					.line {
+						width: 53px;
+						height: 1px;
+
+						background-color: var(--background-primary);
+					}
+				}
+
+				.tittle {
+					font-family: var(--font-gotham);
+					font-size: 54px;
+					font-weight: 500;
+					line-height: 77pt;
+				}
+
+				.paragraph {
+					margin-top: 30px;
+					font-family: var(--font-gotham);
+					font-size: 18px;
+					font-weight: 300;
+					line-height: 27pt;
+
+					span {
+						color: var(--font-color-primary);
+					}
+				}
+			}
+
+			.wrapContent {
+				width: 100%;
+				margin-top: 100px;
+
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				flex-wrap: wrap;
+
+				gap: 45px;
+
+				.card {
+					max-width: 412px;
+					width: 100%;
+					height: 598px;
+					background-color: var(--background-main);
+					border-radius: 18px;
+					overflow: hidden;
+
+					.img {
+						width: 100%;
+						height: 252px;
+						background-color: blueviolet;
+
+						.cardSwiper {
+							width: 100%;
+							height: 100%;
+
+							.item {
+								width: 100%;
+								height: 100%;
+
+								object-fit: cover;
+								object-position: center;
+							}
+						}
+					}
+
+					.content {
+						padding: 35px 38px;
+
+						.tittle {
+							font-family: var(--font-gotham);
+							font-size: 22px;
+							font-weight: 500;
+							line-height: normal;
+						}
+						.description {
+							margin-top: 5px;
+							font-family: var(--font-gotham);
+							font-size: 16px;
+							font-weight: 400;
+							line-height: normal;
+							color: var(--font-color-primary);
+						}
+
+						.wrapPrice {
+							width: 100%;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+
+							.price {
+								font-family: var(--font-gotham);
+								font-size: 27px;
+								font-weight: 700;
+								line-height: 50pt;
+								color: #2bb245;
+
+								span {
+									font-size: 18px;
+								}
+							}
+							.category {
+								font-family: var(--font-gotham);
+								font-size: 16px;
+								font-weight: 400;
+								line-height: 35pt;
+							}
+						}
+
+						.wrapQuarterly {
+							width: 100%;
+							padding: 15px 34px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							flex-wrap: nowrap;
+
+							background-color: #f1f3f8;
+							border-radius: 9px;
+
+							.left,
+							.right {
+								.tittle {
+									font-family: var(--font-gotham);
+									font-size: 16px;
+									font-weight: 500;
+									line-height: normal;
+								}
+
+								.paragraph {
+									font-family: var(--font-gotham);
+									font-size: 16px;
+									font-weight: 400;
+									color: #6c6f75;
+								}
+							}
+						}
+
+						.flex {
+							width: 100%;
+							margin-top: 20px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							.btn {
+								padding: 26px 65px;
+
+								font-family: var(--font-gotham);
+								font-size: 18px;
+								font-weight: 500;
+								color: var(--font-color-white);
+
+								background-color: var(--background-primary);
+								border-radius: var(--border-radius-btn);
+							}
 						}
 					}
 				}

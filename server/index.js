@@ -9,7 +9,13 @@ const PORT = process.env.PORT || 3004;
 
 app.use(
 	cors({
-		origin: [, 'http://127.0.0.1:3000', 'https://127.0.0.1:3000'],
+		origin: [
+			,
+			'http://127.0.0.1:3000',
+			'https://127.0.0.1:3000',
+			'http://localhost:3000',
+			'https://localhost:3000',
+		],
 		methods: ['GET', 'POST'],
 		credentials: false,
 	})
@@ -17,7 +23,7 @@ app.use(
 
 app.use(express.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use('/public', express.static(__dirname + '/public'));
 app.use('/api', require('./controllers/app'));
 
 // app.use((req, res) => {
